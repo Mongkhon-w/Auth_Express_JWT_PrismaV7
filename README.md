@@ -47,6 +47,7 @@ npx prisma init
 ### Update schema
 
 1. Run this command `npx prisma migrate dev --name init`
+2. ล้างฐานข้อมูลเก่า `npx prisma migrate reset `
 
 ### Create Folder
 ```bash
