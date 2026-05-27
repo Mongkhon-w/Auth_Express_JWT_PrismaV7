@@ -1,0 +1,36 @@
+{
+  "dependencies": {
+    "@prisma/adapter-mariadb": "^7.8.0",
+    "@prisma/client": "^7.8.0",
+    "bcryptjs": "^3.0.3",
+    "body-parser": "^2.2.2",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mariadb": "^3.5.2",
+    "prisma": "^7.8.0"
+  },
+  "name": "auth_express_jwt_prismav7",
+  "version": "1.0.0",
+  "description": "* MySQL\r * Node.js\r * Express\r * Prisma (latest)\r * JWT & bcryptjs\r * Vscode\r     * Thunder Client (For API Testing)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mongkhon-w/Auth_Express_JWT_PrismaV7.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Mongkhon-w/Auth_Express_JWT_PrismaV7/issues"
+  },
+  "homepage": "https://github.com/Mongkhon-w/Auth_Express_JWT_PrismaV7#readme",
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "tsx": "^4.22.3"
+  }
+}

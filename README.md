@@ -5,7 +5,7 @@
 * MySQL
 * Node.js
 * Express
-* Prisma (v6)
+* Prisma (latest)
 * JWT & bcryptjs
 * Vscode
     * Thunder Client (For API Testing)
@@ -37,7 +37,8 @@ node server.js
 
 ```bash
 npm init -y
-npm install express jsonwebtoken bcryptjs prisma@^6 @prisma/client@^6 body-parser dotenv
+npm install express jsonwebtoken bcryptjs body-parser dotenv
+npm install prisma@latest @prisma/client@latest @prisma/adapter-mariadb mariadb
 npm install -D @types/node tsx
 npx prisma init
 ```
