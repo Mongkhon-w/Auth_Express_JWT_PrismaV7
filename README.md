@@ -46,8 +46,14 @@ npx prisma init
 
 ### Update schema
 
-1. Update schema in `prisma/schema.prisma`
-2. Run this command `npx prisma migrate dev --name init`
+1. Run this command `npx prisma migrate dev --name init`
+
+### Create Folder
+```bash
+touch server.js config.js routes.js
+mkdir controllers models middlewares
+touch controllers/authController.js middlewares/middleware.js models/userModel.js
+```
 
 ### API Endpoints
 
