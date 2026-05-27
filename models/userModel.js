@@ -29,7 +29,27 @@ const findUserByUsername = async (username) => {
   });
 };
 
+const findUserById = async (id) => {
+  return prisma.user.findUnique({ where: { id: id } });
+};
+
+// ฟังก์ชันบันทึก Refresh Token แบบ Hash
+const updateRefreshToken = async (userId, token) => {
+  let tokenData = token;
+  // ถ้ามีการส่ง token มา ให้ทำการ Hash ก่อน (ถ้าเป็น null คือการ Logout จะข้ามไป)
+  if (token) {
+    tokenData = await bcrypt.hash(token, 10); 
+  }
+
+  return prisma.user.update({
+    where: { id: userId },
+    data: { refreshToken: tokenData }
+  });
+};
+
 module.exports = {
   createUser,
   findUserByUsername,
+  findUserById,
+  updateRefreshToken
 };
