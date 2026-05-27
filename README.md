@@ -1,4 +1,4 @@
-# Auth API ด้วย Express, JWT, MySQL และ Prisma version 7
+# Access & Refresh Token
 
 ## Required
 
@@ -41,6 +41,7 @@ touch controllers/authController.js middlewares/middleware.js models/userModel.j
 
 ```bash
 npx prisma generate
+npx prisma db push (ใช้ db push จะสะดวกกว่า migrate ตอนที่เราแค่เพิ่มฟิลด์เล็กๆ)
 ```
 
 ### Server
@@ -68,4 +69,16 @@ node server.js
 ```
 
 **3. Protected** (`GET http://localhost:3000/api/protected`)
-* **Header:** `Authorization: <Token_Here>`
+* **Header:** `Authorization: <วาง_accessToken_ตรงนี้>`
+
+**4. Refresh Token** (`POST http://localhost:3000/api/refresh`)
+```json
+{
+  "token": "วาง_refreshToken_ตัวจริง_ตรงนี้"
+}
+(ระบบจะคืนค่า accessToken ใบใหม่กลับมาให้)
+```
+
+**5. Logout** (`POST http://localhost:3000/api/logout`)
+* **Header:** `Authorization: <วาง_accessToken_ตรงนี้>`
+(ทดสอบความปลอดภัย: หลังจาก Logout สำเร็จ หากพยายามยิง API ในข้อ 4 อีกครั้ง ระบบจะแจ้ง 403 Forbidden ทันที!)
