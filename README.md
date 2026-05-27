@@ -10,27 +10,6 @@
 * Vscode
     * Thunder Client (For API Testing)
 
-## Running
-
-### Database
-
-```sql
-CREATE DATABASE mydb;
-USE mydb;
-```
-
-### Schema
-
-```bash
-npx prisma generate
-```
-
-### Server
-
-```bash
-node server.js
-```
-
 ## Develop
 
 ### First time
@@ -54,6 +33,20 @@ npx prisma init
 touch server.js config.js routes.js
 mkdir controllers models middlewares
 touch controllers/authController.js middlewares/middleware.js models/userModel.js
+```
+
+## Running
+
+### Schema
+
+```bash
+npx prisma generate
+```
+
+### Server
+
+```bash
+node server.js
 ```
 
 ### API Endpoints
